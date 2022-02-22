@@ -2,4 +2,4 @@
 
 Part 6 of the inventory tutorial series.
 Usable items.
-Video: https://youtu.be/?
+Video: https://youtu.be/Kt1zZtHlX4c
