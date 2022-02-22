@@ -14,6 +14,9 @@ var sprites = {
 	"tshirt": preload( "res://items/sprites/tshirt.png" ),
 	"wood": preload( "res://items/sprites/wood.png" ),
 	"wooden_sword": preload( "res://items/sprites/wooden_sword.png" ),
+	"small_healing_potion": preload( "res://items/sprites/small_red_potion.png" ),
+	"big_healing_potion": preload( "res://items/sprites/big_red_potion.png" ),
+	"rarity_upgrade": preload( "res://items/sprites/rarity_upgrade.png" ),
 }
 
 var fonts = {
@@ -30,7 +33,9 @@ var colors = {
 var tscn = {
 	"splitter": preload( "res://ui/splitter.tscn" ),
 	"hotbar_slot": preload( "res://inventory/hotbar_slot.tscn" ),
-	"floor_item": preload( "res://interactables/floor_item.tscn" )
+	"floor_item": preload( "res://interactables/floor_item.tscn" ),
+	"cooldown": preload( "res://items/usable/cooldown.tscn" ),
+	"quantity": preload( "res://items/quantity.tscn" ),
 }
 
 var stat_info = {}
@@ -45,7 +50,8 @@ func _ready():
 	
 	file.close()
 
-
+func get_instance( id ):
+	return tscn[ id ].instance()
 
 
 

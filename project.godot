@@ -62,7 +62,7 @@ _global_script_classes=[ {
 "base": "Inventory_Slot",
 "class": "Hotbar_Slot",
 "language": "GDScript",
-"path": "res://ui/hotbar_slot.gd"
+"path": "res://inventory/hotbar_slot.gd"
 }, {
 "base": "NinePatchRect",
 "class": "Inventory",
@@ -84,6 +84,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://items/item_affix_list.gd"
 }, {
+"base": "Item_Usable",
+"class": "Item_Healing",
+"language": "GDScript",
+"path": "res://items/usable/item_healing.gd"
+}, {
 "base": "Scale_Control",
 "class": "Item_Info",
 "language": "GDScript",
@@ -98,6 +103,16 @@ _global_script_classes=[ {
 "class": "Item_Unique_Stats",
 "language": "GDScript",
 "path": "res://items/item_unique_stats.gd"
+}, {
+"base": "Item_Usable",
+"class": "Item_Upgrade",
+"language": "GDScript",
+"path": "res://items/usable/item_upgrade.gd"
+}, {
+"base": "Node",
+"class": "Item_Usable",
+"language": "GDScript",
+"path": "res://items/item_usable.gd"
 }, {
 "base": "Node",
 "class": "Resource_Manager",
@@ -140,9 +155,12 @@ _global_script_class_icons={
 "Inventory_Slot": "",
 "Item": "",
 "Item_Affix_List": "",
+"Item_Healing": "",
 "Item_Info": "",
 "Item_Info_Line": "",
 "Item_Unique_Stats": "",
+"Item_Upgrade": "",
+"Item_Usable": "",
 "Resource_Manager": "",
 "Scale_Control": "",
 "Split_Stack": "",
@@ -163,6 +181,11 @@ ItemManager="*res://managers/item_manager.gd"
 ResourceManager="*res://managers/resource_manager.gd"
 SettingsManager="*res://managers/settings_manager.gd"
 SignalManager="*res://managers/signal_manager.gd"
+
+[debug]
+
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
 
 [display]
 
@@ -215,27 +238,37 @@ move_up={
 }
 hotbar_1={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":49,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
 }
 hotbar_2={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":50,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
 }
 hotbar_3={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":51,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
 }
 hotbar_4={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":52,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
 }
 hotbar_5={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":53,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
 }
 interact={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+inventory={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":73,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 

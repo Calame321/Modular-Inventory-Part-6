@@ -41,9 +41,9 @@ item_id = "helmet"
 
 [node name="chest" parent="Walls" instance=ExtResource( 4 )]
 position = Vector2( 442, 219 )
-size = 5
+size = 15
 inventory_name = "Normal Chest"
-items = [ "magic_orb", "wood", "stone_brick" ]
+items = [ "magic_orb", "wood", "stone_brick", "small_healing_potion", "small_healing_potion", "small_healing_potion", "big_healing_potion", "rarity_upgrade", "rarity_upgrade", "rarity_upgrade", "rarity_upgrade", "big_healing_potion", "big_healing_potion", "big_healing_potion", "big_healing_potion" ]
 
 [node name="chest2" parent="Walls" instance=ExtResource( 5 )]
 position = Vector2( 539, 268 )

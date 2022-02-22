@@ -28,7 +28,7 @@ func set_labels():
 func _on_close_pressed():
 	hide()
 
-func _on_quantity_slider_value_changed(value):
+func _on_quantity_slider_value_changed( _value ):
 	set_labels()
 
 
